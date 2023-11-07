@@ -1,0 +1,104 @@
+/*desktop 1440px*/
+:root{
+    --clr-text-pri-Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --clr-text-pri-Soft-red: hsl(14, 88%, 65%);
+    --clr-text-Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --clr-text-Dark-grayish-blue: hsl(240, 6%, 50%);
+    --clr-backg-Soft-violet: hsl(273, 75%, 66%);
+    --clr-backg-Soft-blue: hsl(240, 73%, 65%);
+    --clr-dividers-Light-grayish-blue: hsl(240, 5%, 91%);
+    --font-size:12px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: content-box;
+    font-family: 'Overpass', sans-serif;
+}
+html{
+    background:linear-gradient(var(--clr-backg-Soft-blue),var(--clr-backg-Soft-violet));
+    width: auto;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+body{width: 80%;
+}
+card{
+width: fit-content;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "image text";
+    grid-row: inherit;
+   
+    border-radius: 2rem;
+  
+    background-color: white;
+    padding: 6rem 0rem 6rem 1rem;
+}
+#image-panel{
+    padding: 0rem 2rem 0rem 0rem;
+    grid-area: image;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: 20% 40%;
+    
+}
+img{
+    object-position: -40% 0%;
+}
+#text-panel{
+    padding: 0rem 3rem 0rem 0rem;
+    grid-area: text;
+}
+h1{
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    font-family: 'Overpass', sans-serif;
+    margin-bottom:2rem;
+    
+}
+img{
+    padding:0.5rem 0rem 0.5rem 0rem;
+}
+.answer, #answer1{
+    visibility: hidden;
+    transition: display 0.3s;
+    padding:1rem 0rem 1rem 0rem;
+}
+
+.question_box{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.question,#question1{
+    display: inline;
+    cursor:pointer;
+}
+.question:hover,#question1:hover{
+    color: var(--clr-text-pri-Soft-red);
+}
+.selectedAnswer
+{
+    visibility: visible;
+    display: block;
+}
+.selectedQuestion{
+    font-weight: bold;
+}
+.selectedArrow
+{
+    transform:rotate(180deg);
+}
+
+.attribution { 
+    display:none;
+    font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@media (max-size:375px
+){
+
+}
+/*- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700*/
